@@ -3,7 +3,7 @@
 
 	<div class="o-help-wrapper">
 		<!-- Search -->
-		<details class="o-help-section" data-help-control="search lmsearch">
+		<details class="o-help-section" data-help-section="search" data-help-control="search lmsearch">
 			<summary>Search</summary>
 			<div class="o-help-answer">
 			<p>Search results start to appear once you have typed at least 2 characters. Select a search result to zoom to that location.</p>
@@ -21,7 +21,7 @@
 		</details>
 
 		<!-- Show information about objects in the map -->
-		<details class="o-help-section">
+		<details class="o-help-section" data-help-section="featureinfo">
 			<summary>Show information about objects in the map</summary>
 			<div class="o-help-answer">
 			<p class="padBottom">Click an object in the map to open a box with information about the object.</p>
@@ -29,7 +29,7 @@
 		</details>
 
 		<!-- Zoom and navigate -->
-		<details class="o-help-section">
+		<details class="o-help-section" data-help-section="navigation">
 			<summary>Zoom and navigate</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item" data-help-control="zoom">
@@ -69,7 +69,7 @@
 		</details>
 
 		<!-- Show and hide map layers -->
-		<details class="o-help-section" data-help-control="legend">
+		<details class="o-help-section" data-help-section="legend" data-help-control="legend">
 			<summary>Show and hide map layers</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item">
@@ -128,7 +128,7 @@
 		</details>
 
 		<!-- Measure -->
-		<details class="o-help-section" data-help-control="measure">
+		<details class="o-help-section" data-help-section="measure" data-help-control="measure">
 			<summary>Measure</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item">
@@ -167,7 +167,7 @@
 		</details>
 
 		<!-- Draw and write in the map -->
-		<details class="o-help-section" data-help-control="draw drawplugin">
+		<details class="o-help-section" data-help-section="draw" data-help-control="draw drawplugin">
 			<summary>Draw and write in the map</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item">
@@ -211,7 +211,7 @@
 		</details>
 
 		<!-- Print -->
-		<details class="o-help-section" data-help-control="print">
+		<details class="o-help-section" data-help-section="print" data-help-control="print">
 			<summary>Print</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item">
@@ -252,7 +252,7 @@
 		</details>
 
 		<!-- Share map -->
-		<details class="o-help-section" data-help-control="sharemap">
+		<details class="o-help-section" data-help-section="sharemap" data-help-control="sharemap">
 			<summary>Share map</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item" data-help-control="sharemap[storeMethod=saveStateToServer]">
@@ -267,7 +267,7 @@
 		</details>
 
 		<!-- Links to other maps -->
-		<details class="o-help-section" data-help-control="externalurl">
+		<details class="o-help-section" data-help-section="externalurl" data-help-control="externalurl">
 			<summary>Links to other maps</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item">
@@ -306,7 +306,7 @@
 		</details>
 
 		<!-- Add temporary layers to the map -->
-		<details class="o-help-section" data-help-control="draganddrop">
+		<details class="o-help-section" data-help-section="draganddrop" data-help-control="draganddrop">
 			<summary>Add temporary layers to the map</summary>
 			<div class="o-help-answer">
 			<p class="padBottom">Drag and drop files onto the map. Supported file formats are GeoJSON, GPX, IGC, KML and TopoJSON</p>
@@ -322,7 +322,7 @@
 		</details>
 
 		<!-- Coordinate systems and coordinates -->
-		<details class="o-help-section" data-help-control="position">
+		<details class="o-help-section" data-help-section="position" data-help-control="position">
 			<summary>Coordinate systems and coordinates</summary>
 			<div class="o-help-answer">
 			<p class="padBottom">Change the coordinate system by clicking it in the footer. You can choose between Sweref99 17.15, Sweref99 TM and WGS84</p>
@@ -338,7 +338,7 @@
 		</details>
 
 		<!-- Embedded maps -->
-		<details class="o-help-section" data-help-control="fullscreen">
+		<details class="o-help-section" data-help-section="embed" data-help-control="fullscreen">
 			<summary>Embedded maps</summary>
 			<div class="o-help-answer">
 			<p>To get full functionality</p>
@@ -350,7 +350,7 @@
 		</details>
 
 		<!-- Filter -->
-		<details class="o-help-section" data-help-control="origofilteretuna">
+		<details class="o-help-section" data-help-section="filter" data-help-control="origofilteretuna">
 			<summary>Filter</summary>
 			<div class="o-help-answer">
 			<p>Tool for filtering visible layers by attribute.</p>
@@ -385,7 +385,7 @@
 		</details>
 
 		<!-- Compare map views -->
-		<details class="o-help-section" data-help-control="swiper">
+		<details class="o-help-section" data-help-section="swiper" data-help-control="swiper">
 			<summary>Compare map views</summary>
 			<div class="o-help-answer">
 			<p>Tool for comparing different map views. You can compare side by side or through a spyglass.
@@ -412,7 +412,7 @@
 		</details>
 
 		<!-- Select in the map -->
-		<details class="o-help-section" data-help-control="multiselection">
+		<details class="o-help-section" data-help-section="multiselection" data-help-control="multiselection">
 			<summary>Select in the map</summary>
 			<div class="o-help-answer">
 			<p>Tool for selecting objects in the map layers and exporting the selection to a file.
@@ -462,7 +462,7 @@
 		</details>
 
 		<!-- Other -->
-		<details class="o-help-section">
+		<details class="o-help-section" data-help-section="other">
 			<summary>Other</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item" data-help-control="mapmenu">

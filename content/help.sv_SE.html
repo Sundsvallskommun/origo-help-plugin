@@ -3,7 +3,7 @@
 	
 	<div class="o-help-wrapper">
 		<!-- Sök -->
-		<details class="o-help-section" data-help-control="search lmsearch">
+		<details class="o-help-section" data-help-section="search" data-help-control="search lmsearch">
 			<summary>Sök</summary>
 			<div class="o-help-answer">
 			<p>Sökresultat börjar visas när du skrivit in minst 2 tecken. Välj ett sökresultat och du zoomas till vald plats.</p>
@@ -21,7 +21,7 @@
 		</details>
 
 		<!-- Visa information om objekt i kartan -->
-		<details class="o-help-section">
+		<details class="o-help-section" data-help-section="featureinfo">
 			<summary>Visa information om objekt i kartan</summary>
 			<div class="o-help-answer">
 			<p class="padBottom">Klicka på objekt i kartan för att få upp en ruta med information om objektet.</p>		
@@ -29,7 +29,7 @@
 		</details>
 		
 		<!-- Zooma och navigera -->
-		<details class="o-help-section">
+		<details class="o-help-section" data-help-section="navigation">
 			<summary>Zooma och navigera</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item" data-help-control="zoom">
@@ -69,7 +69,7 @@
 		</details>
 
 		<!-- Visa och dölj kartlager -->
-		<details class="o-help-section" data-help-control="legend">
+		<details class="o-help-section" data-help-section="legend" data-help-control="legend">
 			<summary>Visa och dölj kartlager</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item">
@@ -128,7 +128,7 @@
 		</details>
 
 		<!-- Mäta -->
-		<details class="o-help-section" data-help-control="measure">
+		<details class="o-help-section" data-help-section="measure" data-help-control="measure">
 			<summary>Mäta</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item">
@@ -167,7 +167,7 @@
 		</details>
 
 		<!-- Rita och skriv i kartan -->
-		<details class="o-help-section" data-help-control="draw drawplugin">
+		<details class="o-help-section" data-help-section="draw" data-help-control="draw drawplugin">
 			<summary>Rita och skriv i kartan</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item">
@@ -211,7 +211,7 @@
 		</details>
 
 		<!-- Skriv ut -->
-		<details class="o-help-section" data-help-control="print">
+		<details class="o-help-section" data-help-section="print" data-help-control="print">
 			<summary>Skriv ut</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item">
@@ -252,7 +252,7 @@
 		</details>
 
 		<!-- Dela karta -->
-		<details class="o-help-section" data-help-control="sharemap">
+		<details class="o-help-section" data-help-section="sharemap" data-help-control="sharemap">
 			<summary>Dela karta</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item" data-help-control="sharemap[storeMethod=saveStateToServer]">
@@ -267,7 +267,7 @@
 		</details>
 
 		<!-- Google Street View och OpenStreetMap -->
-		<details class="o-help-section" data-help-control="externalurl">
+		<details class="o-help-section" data-help-section="externalurl" data-help-control="externalurl">
 			<summary>Kartlänkar till andra kartor</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item">
@@ -306,7 +306,7 @@
 		</details>
 
 		<!-- Lägg till tillfälliga lager i kartan -->
-		<details class="o-help-section" data-help-control="draganddrop">
+		<details class="o-help-section" data-help-section="draganddrop" data-help-control="draganddrop">
 			<summary>Lägg till tillfälliga lager i kartan</summary>
 			<div class="o-help-answer">
 			<p class="padBottom">Dra och släpp filer i kartan. Filformat som fungerar är GeoJSON, GPX, IGC, KML och TopoJSON</p>
@@ -322,7 +322,7 @@
 		</details>
 
 		<!-- Koordinatsystem och koordinater -->
-		<details class="o-help-section" data-help-control="position">
+		<details class="o-help-section" data-help-section="position" data-help-control="position">
 			<summary>Koordinatsystem och koordinater</summary>
 			<div class="o-help-answer">
 			<p class="padBottom">Byt koordinatsystem genom att klicka på det i sidfoten. Du kan välja mellan Sweref99 17.15, Sweref99 TM och WGS84</p>
@@ -338,7 +338,7 @@
 		</details>
 
 		<!-- Inbäddade kartor -->
-		<details class="o-help-section" data-help-control="fullscreen">
+		<details class="o-help-section" data-help-section="embed" data-help-control="fullscreen">
 			<summary>Inbäddade kartor</summary>
 			<div class="o-help-answer">
 			<p>För att få full funktionalitet</p>
@@ -350,7 +350,7 @@
 		</details>
 
 		<!-- Filter -->
-		<details class="o-help-section" data-help-control="origofilteretuna">
+		<details class="o-help-section" data-help-section="filter" data-help-control="origofilteretuna">
 			<summary>Filter funktion</summary>
 			<div class="o-help-answer">
 			<p>Verktyg för att filtrera på attribut i tända lager.</p>
@@ -385,7 +385,7 @@
 		</details>
 
 		<!-- Jämför kartvyer -->
-		<details class="o-help-section" data-help-control="swiper">
+		<details class="o-help-section" data-help-section="swiper" data-help-control="swiper">
 			<summary>Jämför kartvyer</summary>
 			<div class="o-help-answer">
 			<p>Verktyg för att jämföra olika kartvyer. Det går att välja mellan att jämföra sid vid sida eller genom ett kikhål. 
@@ -412,7 +412,7 @@
 		</details>
 
 		<!-- Jämför kartvyer -->
-		<details class="o-help-section" data-help-control="multiselection">
+		<details class="o-help-section" data-help-section="multiselection" data-help-control="multiselection">
 			<summary>Markera i kartan</summary>
 			<div class="o-help-answer">
 			<p>Verktyg för att markera och välja ut objekt i kartnas lager samt att exportera ut urvalet till extern fil. 
@@ -462,7 +462,7 @@
 		</details>
 		
 		<!-- Övrigt -->
-		<details class="o-help-section">
+		<details class="o-help-section" data-help-section="other">
 			<summary>Övrigt</summary>
 			<div class="o-help-answer">
 			<div class="list-group-item" data-help-control="mapmenu">
