@@ -38,7 +38,8 @@ const Help = function Help(options = {}) {
     height = '60vh',
     target,
     filterByControls = true,
-    placement = ['menu']
+    placement = ['menu'],
+    tracking = true
   } = options;
 
   let mapMenu;
@@ -129,6 +130,17 @@ const Help = function Help(options = {}) {
     });
     // addComponent renders the panel in the map
     parent.addComponent(panel);
+    // help:section is dispatched on the viewer when a section of the built-in help is expanded, so that e.g. a
+    // statistics plugin can track which sections are read. section is the section's data-help-section, which is
+    // the same in every language. toggle doesn't bubble, so it is listened for in the capture phase.
+    if (!url && tracking) {
+      panel.getContentElement().addEventListener('toggle', (evt) => {
+        const section = evt.target.closest?.('.o-help-section');
+        if (evt.target === section && section.open) {
+          viewer.dispatch('help:section', { section: section.dataset.helpSection || section.querySelector('summary')?.textContent.trim() });
+        }
+      }, true);
+    }
     // The toolbar button is shown as active (blue) while the panel is open, also when it is closed with the cross.
     if (helpButton) {
       panel.on('show', () => helpButton.setState('active'));
@@ -144,7 +156,10 @@ const Help = function Help(options = {}) {
 
   // Shows the help in a movable panel on top of the map. Without url the built-in help text is shown,
   // with url that page is shown in the panel. If target is also given (e.g. '_blank'), url opens in a new window.
-  function showHelp(parent) {
+  // help:open is dispatched on the viewer so that e.g. a statistics plugin can track that the help is opened.
+  // placement tells whether the help was opened from the map menu ('menu') or the toolbar button ('screen').
+  function showHelp(parent, source) {
+    if (tracking) viewer.dispatch('help:open', { placement: source });
     if (url && target) {
       window.open(url, target);
       return;
@@ -160,7 +175,7 @@ const Help = function Help(options = {}) {
     if (panel?.getStatus()) {
       panel.hide();
     } else {
-      showHelp(parent);
+      showHelp(parent, 'screen');
     }
   }
 
@@ -194,7 +209,7 @@ const Help = function Help(options = {}) {
       if (inMenu) {
         menuItem = mapMenu.MenuItem({
           click() {
-            showHelp(component);
+            showHelp(component, 'menu');
             mapMenu.close();
           },
           icon,

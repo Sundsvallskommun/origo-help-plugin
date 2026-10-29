@@ -17,6 +17,7 @@ The structure follows [origo-map/barebone-plugin](https://github.com/origo-map/b
 | `target`     | Together with `url`: opens the page with `window.open(url, target)`, e.g. `'_blank'` | –                    |
 | `placement`  | Where the button that opens the help is shown: `'menu'` (the map menu) and/or `'screen'` (button in the map toolbar), e.g. `['menu', 'screen']` | `['menu']` |
 | `filterByControls` | Only show the parts of the built-in help that belong to controls present in the map | `true`       |
+| `tracking`   | Dispatch the events `help:open` and `help:section` on the viewer, see [Events](#events) | `true`                   |
 
 ## Example
 
@@ -126,6 +127,21 @@ Names currently in use:
 | Compare map views | `swiper` |
 | Select in the map | `multiselection` |
 | Other | menu: `mapmenu`, save map image: `exportmap`, link: `link`, login: `oidcComponent` |
+
+### Events
+
+Unless `tracking` is `false`, the plugin dispatches events on the viewer that other plugins, e.g. for usage statistics, can listen to with `viewer.on`.
+
+| Event          | Data            | Dispatched when                                                                                  |
+|----------------|-----------------|--------------------------------------------------------------------------------------------------|
+| `help:open`    | `{ placement }` | the help is opened; `placement` is `menu` (the map menu) or `screen` (the button in the toolbar) |
+| `help:section` | `{ section }`   | a section of the built-in help is expanded; `section` is the section's `data-help-section`       |
+
+Each section has a `data-help-section` that is the same in every language, so that statistics are not split by language. A new section needs its own id in every language file. If the attribute is missing, the heading is sent instead.
+
+```html
+<details class="o-help-section" data-help-section="measure" data-help-control="measure">
+```
 
 Icons reference Origo's icon sprites directly, e.g. `<svg class="ico"><use href="#ic_search_24px"></use></svg>`.
 Images with an absolute path (e.g. `/img/png/osm.png`) are loaded from the map application and are not built in.
